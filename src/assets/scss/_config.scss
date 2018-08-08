@@ -1,0 +1,77 @@
+/* Vars */
+$black: #010000;
+$white: #ffffff;
+$lightGrey: #e6e6e6;
+$darkGrey: #333;
+$red: rgba(#ba0a39, 0.7);
+$purple: rgb(161, 53, 194);
+$darkpurple: rgba(90, 11, 113, 0.9);
+$green: rgba(86, 166, 56, 0.7);
+$orange: rgba(230, 138, 30, 0.7);
+$bballorange: #D6662C;
+$silver: rgba(158, 158, 158, 0.7);
+$blue: rgba(37, 79, 189, 0.7);
+
+@mixin translateY($e) {
+  -webkit-transform: translateY($e);
+    -moz-transform: translateY($e);
+          transform: translateY($e);
+}
+
+@mixin transition($e) {
+  -webkit-transition: $e;
+    -moz-transition: $e;
+          transition: $e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  color: $black;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  @include transition(.4s ease-in-out);
+  cursor: pointer;
+
+  &:hover {
+    color: $bballorange;
+    text-decoration: none;
+    @include transition(.4s ease-in-out);
+  }
+}
+
+button {
+  @include transition(.4s ease-in-out);
+  cursor: pointer;
+  background-color: $white;
+  border: 1px solid $orange;
+  border-radius: 0.4em;
+  color: $orange;
+  padding: 0.5em;
+  margin: 0.5rem 1rem;
+
+   &:hover {
+     @include transition(.4s ease-in-out);
+     background-color: $orange;
+     color: $white;
+   }
+  
+  &.logo {
+    background: none;
+    border: none;
+  }
+}
+
+.svg-inline--fa {
+  vertical-align: middle;
+}

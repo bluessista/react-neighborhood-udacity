@@ -1,0 +1,44 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    background-color: #333;
+    color: #fff;
+    height: 8vh;
+    order: 1;
+    position: fixed;
+    top: 0;
+    z-index: 210;
+
+    .main-heading {
+        display: none;
+        margin: 0;
+    }
+
+    nav,
+    nav ul,
+    nav ul li {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        padding-right: 2em;
+        ul {
+            display: flex;
+        }
+        ul li {
+            list-style-type: none;
+            margin-right: 20px;
+            &.lastItem {
+                margin: 0;
+            }
+            a {
+                font-size: 19px;
+                line-height: normal;
+                color: $white;
+            }
+        }
+    }
+}

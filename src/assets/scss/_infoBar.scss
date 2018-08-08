@@ -1,0 +1,48 @@
+.infoBar {
+    position: relative;
+    top: 8vh;
+    height: 84vh;
+    z-index: 200;
+    overflow: scroll;
+    background-color: #333;
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .courts {
+        height: auto;
+        background-color: $bballorange;
+        list-style-type: none;
+        padding: 1rem;
+        margin: 1rem 0 1rem .5rem;
+        color: $white;
+        border-top-left-radius: .5rem;
+        border-bottom-left-radius: .5rem;
+
+    &:hover{
+        background-color: $orange;
+        cursor: pointer;
+    }
+
+    .title {
+        font-weight: lighter;
+        font-size: 1.05rem;
+        margin-bottom: .5rem
+    }
+
+    .type {
+        font-size: 0.7rem;
+        font-weight: 300;
+    }
+  }
+
+    input#filter-input {
+        padding: .5rem 0 .5rem .5rem;
+        margin: .5rem 0 .5rem .5rem;
+        width: 95%;
+        border: 1px solid #d6662c;
+        border-radius: .5rem;
+    }
+}
