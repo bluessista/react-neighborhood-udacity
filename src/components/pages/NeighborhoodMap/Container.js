@@ -16,7 +16,7 @@ class Container extends Component {
       <div style={style} className={className}>
         <Map
             googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDF_Cu5_zu45wknOjk-3ovbjAZQyw_3PlY&v=3.exp&libraries=geometry,drawing,places"
-            loadingElement={<div className="foobar"/>}
+            loadingElement={<div style={{height: `100%`}}/>}
             containerElement={<div style={{ height: `100%` }} />}
             mapElement={<div style={{ height: `100%` }} />}
             courts={courts}
