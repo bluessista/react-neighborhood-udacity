@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Park Ficton",
+        "type": "Park & Grünanlage",
+        "address": "Altona-Altstadt Hafenstraße 22880 Hamburg",
+        "icon": "http://maps.google.com/mapfiles/ms/micons/orange-dot.png",
+        "position": { "lat": 53.5458358, "lng": 9.9520426 }
+    },
+    {
+        "title": "Spielwiese Meeknwiese",
+        "type": "Spielplatz",
+        "address": "Winterhude Meenkwiese 22297 Hamburg",
+        "icon": "http://maps.google.com/mapfiles/ms/micons/orange-dot.png",
+        "position": { "lat": 53.5993904, "lng": 9.9918888 }
+    },
+    {
+        "title": "St. Georg Sportplätze",
+        "type": "Basketballplatz",
+        "address": "St.Georg Knorrstraße 20099 Hamburg",
+        "icon": "http://maps.google.com/mapfiles/ms/micons/orange-dot.png",
+        "position": { "lat": 53.558386, "lng": 10.014652 }
+    },
+    {
+        "title": "Vasco-da-Gama-Platz",
+        "type": "Basketballplatz",
+        "address": "St.Pauli Planten un Blomen 20359 Hamburg",
+        "icon": "http://maps.google.com/mapfiles/ms/micons/orange-dot.png",
+        "position": { "lat": 53.5413847, "lng": 9.989997 }
+    },
+    {
+        "title": "Appelhoff",
+        "type": "Basketballplatz",
+        "address": "Steilshoop Appelhoff 2 22309 Hamburg",
+        "icon": "http://maps.google.com/mapfiles/ms/micons/orange-dot.png",
+        "position": { "lat": 53.605264, "lng": 10.059848 }
+    }
+]

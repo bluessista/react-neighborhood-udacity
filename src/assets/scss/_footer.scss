@@ -1,0 +1,17 @@
+footer {
+    display: flex;
+    width: 100vw;
+    background-color: $orange;
+    color: #fff;
+    font-weight: lighter;
+    font-size: .8rem;
+    height: 8vh;
+    padding: 0 1em;
+    position: fixed;
+    bottom: 0;
+    order: 3;
+    align-items: center;
+    z-index: 201;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+  }

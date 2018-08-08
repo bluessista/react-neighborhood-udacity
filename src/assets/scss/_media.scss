@@ -1,0 +1,27 @@
+@media (min-width: 768px) {
+    .App {
+        min-height: 800px;
+    }
+
+    header, footer {
+        min-height: 6vh;
+        max-height: 8vh;
+    }
+    .container-fluid {
+        height: 92vh;
+    }
+
+    header{
+        .logo {
+            padding-left: 2em;
+          }
+          .main-heading {
+            display: block;
+            margin: 0;
+        }
+    }
+    .infoBar {
+        width: 25vw;
+    }
+
+}

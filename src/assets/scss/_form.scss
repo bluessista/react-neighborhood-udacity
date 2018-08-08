@@ -1,0 +1,58 @@
+.flex-form {
+  list-style-type: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    & p {
+    flex: 1 0 120px;
+    max-width: 220px;
+    margin: 0;
+    }
+
+    & label {
+      padding: 8px;
+      font-weight: 300;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    & button {
+    margin-left: auto;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: $orange;
+    color: $darkGrey;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    border-radius: 2px;
+    }
+
+    &:not(:last-child){
+        margin-bottom: 1.5rem;
+    }
+
+    & input {
+      padding: 0.5rem;
+    }
+
+    & textarea {
+      padding: 0.5rem;
+    }
+  }
+
+  > li > label {
+    flex: 1 0 120px;
+    max-width: 720px;
+  }
+
+  > li > label + *{
+    flex: 1 0 120px;
+    max-width: 720px;
+  }
+}
