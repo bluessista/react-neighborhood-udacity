@@ -6,6 +6,7 @@ import Container from './NeighborhoodMap/Container';
 class NeighborhoodMap extends Component {
   render() {
     const { courts, input, handleInfoWindow, clickedCourt, bounce, openedInfoWindow } = this.props;
+
     return (
       <div className="container-fluid">
         <div className="infoBar" style={{display:'block'}}>
@@ -35,6 +36,7 @@ class NeighborhoodMap extends Component {
                         address={court.address}
                         handleInfoWindow={handleInfoWindow}
                         court={court}
+                        imageUrl={court.imageUrl}
                     />
             )}
           </ul>

@@ -1,9 +1,23 @@
 import React from 'react';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow } from "react-google-maps";
 import PropTypes from 'prop-types';
-import { compose } from 'recompose';
+import { compose, withStateHandlers, lifecycle } from 'recompose';
 
 const Map = compose(
+    withStateHandlers(
+        () => ({ error: null }),
+      ),
+      lifecycle({
+        componentDidMount() {
+          window.gm_authFailure = () => {
+            alert("Attention: There occured an error while loading data from Google maps API. You'll find more info in your console.");
+          };
+        },
+        componentDidCatch(error) {
+          this.setState({ error: error });
+          console.log(error);
+        }
+      }),
     withScriptjs,
     withGoogleMap)(props => 
       <GoogleMap
@@ -21,20 +35,19 @@ const Map = compose(
                     key={court.title}
                     position={ court.position }
                     title={court.title}
-                    onClick={() => props.handleInfoWindow(court)}
+                    onClick={(event) => props.handleInfoWindow(event, court)}
                     animation={
                         props.bounce &&
-                        props.clickedCourt.title === court.title
-                        ? 1
-                        : 0
+                        props.clickedCourt.title === court.title ? 1 : 0
                     }
                 > 
-                {props.clickedCourt.title === court.title && (
-                    <InfoWindow onCloseClick={props.handleInfoWindow(court)}>
+                {props.clickedCourt && props.clickedCourt.title === court.title && (
+                    <InfoWindow onCloseClick={props.handleInfoWindow}>
                         {
                             <div>
                                 <h3>{court.title}</h3>
-                                <span>{court.address}</span>
+                                <p>{court.address}</p>
+                                <img src={court.imageUrl} alt={court.title} width="65%"/>
                             </div>
                         }
                     </InfoWindow>
