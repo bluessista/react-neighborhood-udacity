@@ -20,6 +20,8 @@ $ npm install -d
 $ npm run start
 ```
 
+Be aware, that the app is just jet build for development and needs to be run ```npm run build``` if you want to use the service worker.
+
 ### Techniques
 
 I am using
