@@ -1,37 +1,42 @@
 [
     {
-        "title": "Park Ficton",
-        "type": "Park & Grünanlage",
-        "address": "Altona-Altstadt Hafenstraße 22880 Hamburg",
-        "icon": "http://maps.google.com/mapfiles/ms/micons/orange-dot.png",
-        "position": { "lat": 53.5458358, "lng": 9.9520426 }
-    },
-    {
-        "title": "Spielwiese Meeknwiese",
-        "type": "Spielplatz",
-        "address": "Winterhude Meenkwiese 22297 Hamburg",
-        "icon": "http://maps.google.com/mapfiles/ms/micons/orange-dot.png",
-        "position": { "lat": 53.5993904, "lng": 9.9918888 }
-    },
-    {
         "title": "St. Georg Sportplätze",
+        "_id": 25121945658,
         "type": "Basketballplatz",
         "address": "St.Georg Knorrstraße 20099 Hamburg",
-        "icon": "http://maps.google.com/mapfiles/ms/micons/orange-dot.png",
-        "position": { "lat": 53.558386, "lng": 10.014652 }
+        "position": { "lat": 53.558386, "lng": 10.014652 },
+        "imageUrl" : ""
+    },
+    {
+        "title": "Park Ficton",
+        "_id": 39429238884,
+        "type": "Park & Grünanlage",
+        "address": "Altona-Altstadt Hafenstraße 22880 Hamburg",
+        "position": { "lat": 53.5458358, "lng": 9.9520426 },
+        "imageUrl" : ""
     },
     {
         "title": "Vasco-da-Gama-Platz",
+        "_id": 2833154474,
         "type": "Basketballplatz",
         "address": "St.Pauli Planten un Blomen 20359 Hamburg",
-        "icon": "http://maps.google.com/mapfiles/ms/micons/orange-dot.png",
-        "position": { "lat": 53.5413847, "lng": 9.989997 }
+        "position": { "lat": 53.5413847, "lng": 9.989997 },
+        "imageUrl" : ""
     },
     {
-        "title": "Appelhoff",
+        "title": "Rothenburgsort",
+        "_id": 6337303720,
         "type": "Basketballplatz",
-        "address": "Steilshoop Appelhoff 2 22309 Hamburg",
-        "icon": "http://maps.google.com/mapfiles/ms/micons/orange-dot.png",
-        "position": { "lat": 53.605264, "lng": 10.059848 }
+        "address": "Winterhude Meenkwiese 22297 Hamburg",
+        "position": { "lat": 53.5325621, "lng": 10.0395619 },
+        "imageUrl" : ""
+    },
+    {
+        "title": "Lindenpark",
+        "_id": 42166343900,
+        "type": "Park & Grünanlage",
+        "address": "Hohenfelde Lindenallee 20259 Hamburg",
+        "position": { "lat": 53.5659905, "lng": 9.9598471 },
+        "imageUrl" : ""
     }
 ]

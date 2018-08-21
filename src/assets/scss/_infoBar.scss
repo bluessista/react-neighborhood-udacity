@@ -1,7 +1,7 @@
 .infoBar {
     position: relative;
     top: 8vh;
-    height: 84vh;
+    height: auto;
     z-index: 200;
     overflow: scroll;
     background-color: #333;
@@ -20,6 +20,20 @@
         color: $white;
         border-top-left-radius: .5rem;
         border-bottom-left-radius: .5rem;
+        display: flex;
+
+        & span {
+            flex: 1;
+
+            & img {
+                width: 75%;
+                border-radius: 50%;
+            }
+        }
+
+        & div {
+            flex: 3;
+        }
 
     &:hover{
         background-color: $orange;
