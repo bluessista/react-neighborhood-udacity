@@ -6,7 +6,7 @@ const Header = (props) => {
 
   return (
     <header>
-      <button className="logo" onClick={props.handleInfoBar}>
+      <button className="logo" aria-label="hamburgermenu" onClick={props.handleInfoBar}>
         <FontAwesomeIcon icon="basketball-ball" size="2x" color="#D6662C"/>&nbsp;&nbsp;
         <FontAwesomeIcon icon="bars" color="#fff"/>
       </button>
