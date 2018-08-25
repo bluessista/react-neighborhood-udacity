@@ -22,8 +22,8 @@ class App extends Component {
         input: '',
         allCourts: [],
         clickedCourt: {},
-        openedInfoWindow: false,
-        bounce: false,
+        isOpen: false,
+        isBouncing: false,
         flickrProps: {
             api_key: '70aa4bcc6cdc6c38fc32f1f9438a218b',
             method: 'flickr.favorites.getPublicList',
@@ -51,7 +51,7 @@ class App extends Component {
                 this.setState({})
             })
             .catch(err => {
-                console.log('Flickr API cannot fetch data. Error: '+ err);
+                alert('Flickr API cannot fetch data. Error: '+ err + '\nPlease try again later');
             })
     }
 
@@ -64,12 +64,12 @@ class App extends Component {
         this.setState({ input: '' })
     }
 
-    // if a marker is clicked, the infowindow should open and bounce
+    // if a marker is clicked, the infowindow should open and isBouncing
     handleInfoWindow = (event, court) => {
         if (court === this.state.clickedCourt) {
           this.setState({
             clickedCourt: court,
-            openedInfoWindow: !this.state.openedInfoWindow
+            isOpen: !this.state.isOpen
           });
         } else {
           this.setState({
@@ -109,8 +109,8 @@ class App extends Component {
                         refreshInput={ this.refreshInput }
                         handleInfoWindow={ this.handleInfoWindow }
                         clickedCourt={ this.state.clickedCourt }
-                        bounce={ this.state.bounce }
-                        openedInfoWindow={ this.state.openedInfoWindow }
+                        isBouncing={ this.state.isBouncing }
+                        isOpen={ this.state.isOpen }
                     />} / >
                     <Route path = '/Contact'
                         component = { Contact }

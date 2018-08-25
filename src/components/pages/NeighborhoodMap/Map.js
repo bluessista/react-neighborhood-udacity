@@ -13,9 +13,9 @@ const Map = compose(
             alert("Attention: There occured an error while loading data from Google maps API. You'll find more info in your console.");
           };
         },
-        componentDidCatch(error) {
-          this.setState({ error: error });
-          console.log(error);
+        componentDidCatch(error, errorMsg) {
+          this.setState({ error: error});
+          alert("An error occured with loading Google Maps: " + error + "Please find more details in the console");
         }
       }),
     withScriptjs,
@@ -37,17 +37,17 @@ const Map = compose(
                     title={court.title}
                     onClick={(event) => props.handleInfoWindow(event, court)}
                     animation={
-                        props.bounce &&
+                        window.google.maps.Animation.BOUNCE &&
                         props.clickedCourt.title === court.title ? 1 : 0
                     }
                 > 
                 {props.clickedCourt && props.clickedCourt.title === court.title && (
-                    <InfoWindow onCloseClick={props.handleInfoWindow}>
+                    <InfoWindow onCloseClick={(event) => props.handleInfoWindow(event, court)}>
                         {
-                            <div>
+                            <div tabIndex={0}>
                                 <h3>{court.title}</h3>
                                 <p>{court.address}</p>
-                                <img src={court.imageUrl} alt={court.title} width="65%"/>
+                                <img src={court.imageUrl} alt={court.title} width="60%"/>
                             </div>
                         }
                     </InfoWindow>
