@@ -5,7 +5,7 @@ import Container from './NeighborhoodMap/Container';
 
 class NeighborhoodMap extends Component {
   render() {
-    const { courts, input, handleInfoWindow, clickedCourt, bounce, openedInfoWindow } = this.props;
+    const { courts, input, handleInfoWindow, clickedCourt, isBouncing, isOpen } = this.props;
 
     return (
       <div className="container-fluid">
@@ -16,6 +16,7 @@ class NeighborhoodMap extends Component {
               role="search"
               id="filter-input"
               placeholder="Filter Courts"
+              aria-labelledby="input search courts"
               className="input-search"
               value={input}
               onChange={event => this.props.refreshInput(event.target.value)}
@@ -48,8 +49,8 @@ class NeighborhoodMap extends Component {
             courts={courts}
             handleInfoWindow={handleInfoWindow}
             clickedCourt={clickedCourt}
-            bounce={bounce}
-            openedInfoWindow={openedInfoWindow}
+            isBouncing={isBouncing}
+            isOpen={isOpen}
             input={input}
         />
       </div>
